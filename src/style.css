@@ -1,0 +1,38 @@
+.plugin-page {
+  box-sizing: border-box;
+  padding: 24px;
+  font: 14px/1.5 var(--eidos-font-family, system-ui);
+  color: var(--eidos-foreground);
+}
+.plugin-page h1 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.plugin-page p {
+  margin: 0 0 20px;
+}
+.plugin-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.plugin-controls button {
+  padding: 6px 12px;
+  border: 1px solid var(--eidos-border);
+  border-radius: 6px;
+  background: var(--eidos-background);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.plugin-controls button:hover {
+  background: var(--eidos-surface-hover);
+}
+.plugin-controls button:focus-visible {
+  outline: 2px solid var(--eidos-accent);
+  outline-offset: 2px;
+}
+.plugin-controls output {
+  font-variant-numeric: tabular-nums;
+}

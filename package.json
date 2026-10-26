@@ -1,0 +1,23 @@
+{
+  "name": "my-eidos-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "check": "eidos-plugin check . --target lite",
+    "pack:plugin": "eidos-plugin pack ."
+  },
+  "devDependencies": {
+    "@eidos.space/plugin-sdk": "0.8.0",
+    "@eidos.space/plugin-tools": "0.8.0",
+    "typescript": "5.8.3",
+    "vitest": "4.1.11",
+    "jsdom": "26.1.0"
+  }
+}

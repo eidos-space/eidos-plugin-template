@@ -1,0 +1,16 @@
+import type { Activate } from "@eidos.space/plugin-sdk"
+
+const activate: Activate = (ctx) => {
+  ctx.subscriptions.add(
+    ctx.capabilities.actions.register(
+      "open",
+      async ({ capabilities: { ui } }) => {
+        if (!ui.navigate)
+          throw new Error("Page navigation is unavailable in this host")
+        await ui.navigate("main", "/")
+      }
+    )
+  )
+}
+
+export default activate

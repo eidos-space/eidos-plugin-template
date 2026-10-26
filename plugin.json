@@ -1,0 +1,24 @@
+{
+  "apiVersion": 1,
+  "id": "example.my-plugin",
+  "name": "My Eidos Plugin",
+  "description": "A small page and a command to open it",
+  "version": "0.1.0",
+  "requires": { "pluginApi": "3.0.0" },
+  "extension": "./src/extension.ts",
+  "views": [
+    {
+      "id": "main",
+      "title": "My Eidos Plugin",
+      "kind": "page",
+      "entry": "./src/main.ts"
+    }
+  ],
+  "actions": [
+    { "id": "open", "title": "My Eidos Plugin: Open", "context": "workspace" }
+  ],
+  "placements": [
+    { "location": "navigation", "view": "main" },
+    { "location": "command-palette", "action": "open" }
+  ]
+}
